@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +14,7 @@ public class CalculadoraController {
     @FXML
     private TextArea display;
 
-    private final List<Integer> values = new ArrayList<>();
+    private final List<BigInteger> values = new ArrayList<>();
 
     private OperationEnum operation;
 
@@ -42,7 +43,7 @@ public class CalculadoraController {
                     operation = OperationEnum.DIVISION;
                 }
             }
-            values.add(Integer.parseInt(display.getText()));
+            values.add(new BigInteger(display.getText()));
             display.setText("");
         }
     }
@@ -52,25 +53,25 @@ public class CalculadoraController {
         if (!values.isEmpty() && !display.getText().isBlank()) {
             switch (operation) {
                 case TIMES -> {
-                    int result = values.getFirst() * Integer.parseInt(display.getText());
+                    BigInteger result = values.getFirst().multiply(new BigInteger(display.getText()));
                     display.setText(String.valueOf(result));
                     values.clear();
                 }
                 case PLUS -> {
-                    int result = values.getFirst() + Integer.parseInt(display.getText());
+                    BigInteger result = values.getFirst().add(new BigInteger(display.getText()));
                     display.setText(String.valueOf(result));
                     values.clear();
                 }
                 case MINUS -> {
-                    int result = values.getFirst() - Integer.parseInt(display.getText());
+                    BigInteger result = values.getFirst().subtract(new BigInteger(display.getText()));
                     display.setText(String.valueOf(result));
                     values.clear();
                 }
                 case DIVISION -> {
-                    if (Integer.parseInt(display.getText()) == 0)
+                    if (new BigInteger(display.getText()).intValue() == 0)
                         display.setText("Error");
                     else {
-                        int result = values.getFirst() / Integer.parseInt(display.getText());
+                        BigInteger result = values.getFirst().divide(new BigInteger(display.getText()));
                         display.setText(String.valueOf(result));
                         values.clear();
                     }
