@@ -9,44 +9,60 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="400.0" prefWidth="334.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.brenozende.calculadora.CalculadoraController">
-   <children>
-      <GridPane layoutX="14.0" layoutY="116.0" prefHeight="270.0" prefWidth="304.0">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="87.0" minWidth="10.0" prefWidth="79.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="102.0" minWidth="10.0" prefWidth="80.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="141.0" minWidth="10.0" prefWidth="83.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="63.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
-            <Button fx:id="bt4" mnemonicParsing="false" onAction="#onNumberClick" prefHeight="50.0" prefWidth="70.0" text="4" GridPane.rowIndex="1" />
-            <Button fx:id="bt5" mnemonicParsing="false" onAction="#onNumberClick" prefHeight="50.0" prefWidth="70.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button fx:id="bt6" mnemonicParsing="false" onAction="#onNumberClick" prefHeight="50.0" prefWidth="70.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <Button fx:id="btMinus" mnemonicParsing="false" onAction="#onOperationButton" prefHeight="50.0" prefWidth="70.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-            <Button fx:id="bt1" mnemonicParsing="false" onAction="#onNumberClick" prefHeight="50.0" prefWidth="70.0" text="1" GridPane.rowIndex="2" />
-            <Button fx:id="bt2" mnemonicParsing="false" onAction="#onNumberClick" prefHeight="50.0" prefWidth="70.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Button fx:id="bt3" mnemonicParsing="false" onAction="#onNumberClick" prefHeight="50.0" prefWidth="70.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <Button fx:id="btPlus" mnemonicParsing="false" onAction="#onOperationButton" prefHeight="50.0" prefWidth="70.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-            <Button fx:id="btDiv" mnemonicParsing="false" onAction="#onOperationButton" prefHeight="50.0" prefWidth="70.0" text="/" GridPane.rowIndex="3" />
-            <Button fx:id="bt0" mnemonicParsing="false" onAction="#onNumberClick" prefHeight="50.0" prefWidth="70.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Button fx:id="btTimes" mnemonicParsing="false" onAction="#onOperationButton" prefHeight="50.0" prefWidth="70.0" text="*" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-            <Button fx:id="btEquals" mnemonicParsing="false" onAction="#equals" prefHeight="50.0" prefWidth="70.0" text="=" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-            <Button fx:id="bt7" mnemonicParsing="false" onAction="#onNumberClick" prefHeight="50.0" prefWidth="70.0" text="7" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-            <Button fx:id="bt8" mnemonicParsing="false" onAction="#onNumberClick" prefHeight="50.0" prefWidth="70.0" text="8" GridPane.columnIndex="1" />
-            <Button fx:id="bt9" mnemonicParsing="false" onAction="#onNumberClick" prefHeight="50.0" prefWidth="70.0" text="9" GridPane.columnIndex="2" />
-            <Button fx:id="btCE" mnemonicParsing="false" onAction="#clear" prefHeight="50.0" prefWidth="70.0" text="CE" GridPane.columnIndex="3" />
-         </children>
-      </GridPane>
-      <TextArea fx:id="display" editable="false" layoutX="18.0" layoutY="12.0" prefHeight="95.0" prefWidth="298.0" scrollLeft="50.0">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </TextArea>
-   </children>
+<AnchorPane prefHeight="400.0" prefWidth="334.0" xmlns="http://javafx.com/javafx/24.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.brenozende.calculadora.CalculadoraController">
+    <GridPane layoutX="14.0" layoutY="116.0" prefHeight="270.0" prefWidth="304.0">
+      <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="87.0" minWidth="10.0" prefWidth="79.0"/>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="102.0" minWidth="10.0" prefWidth="80.0"/>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="141.0" minWidth="10.0" prefWidth="83.0"/>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="63.0"/>
+      </columnConstraints>
+      <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+      </rowConstraints>
+        <children>
+          <Button fx:id="bt4" mnemonicParsing="false" onAction="#onNumberClick" prefHeight="50.0" prefWidth="70.0"
+                  text="4" GridPane.rowIndex="1"/>
+          <Button fx:id="bt5" mnemonicParsing="false" onAction="#onNumberClick" prefHeight="50.0" prefWidth="70.0"
+                  text="5" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+          <Button fx:id="bt6" mnemonicParsing="false" onAction="#onNumberClick" prefHeight="50.0" prefWidth="70.0"
+                  text="6" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+          <Button fx:id="btMinus" mnemonicParsing="false" onAction="#onOperationButton" prefHeight="50.0"
+                  prefWidth="70.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+          <Button fx:id="bt1" mnemonicParsing="false" onAction="#onNumberClick" prefHeight="50.0" prefWidth="70.0"
+                  text="1" GridPane.rowIndex="2"/>
+          <Button fx:id="bt2" mnemonicParsing="false" onAction="#onNumberClick" prefHeight="50.0" prefWidth="70.0"
+                  text="2" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+          <Button fx:id="bt3" mnemonicParsing="false" onAction="#onNumberClick" prefHeight="50.0" prefWidth="70.0"
+                  text="3" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+          <Button fx:id="btPlus" mnemonicParsing="false" onAction="#onOperationButton" prefHeight="50.0"
+                  prefWidth="70.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+          <Button fx:id="btDiv" mnemonicParsing="false" onAction="#onOperationButton" prefHeight="50.0"
+                  prefWidth="70.0" text="/" GridPane.rowIndex="3"/>
+          <Button fx:id="bt0" mnemonicParsing="false" onAction="#onNumberClick" prefHeight="50.0" prefWidth="70.0"
+                  text="0" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+          <Button fx:id="btTimes" mnemonicParsing="false" onAction="#onOperationButton" prefHeight="50.0"
+                  prefWidth="70.0" text="*" GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+          <Button fx:id="btEquals" mnemonicParsing="false" onAction="#equals" prefHeight="50.0" prefWidth="70.0"
+                  text="=" GridPane.columnIndex="3" GridPane.rowIndex="3"/>
+          <Button fx:id="bt7" mnemonicParsing="false" onAction="#onNumberClick" prefHeight="50.0" prefWidth="70.0"
+                  text="7" GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
+          <Button fx:id="bt8" mnemonicParsing="false" onAction="#onNumberClick" prefHeight="50.0" prefWidth="70.0"
+                  text="8" GridPane.columnIndex="1"/>
+          <Button fx:id="bt9" mnemonicParsing="false" onAction="#onNumberClick" prefHeight="50.0" prefWidth="70.0"
+                  text="9" GridPane.columnIndex="2"/>
+          <Button fx:id="btCE" mnemonicParsing="false" onAction="#clear" prefHeight="50.0" prefWidth="70.0" text="CE"
+                  GridPane.columnIndex="3"/>
+        </children>
+    </GridPane>
+    <TextArea fx:id="display" editable="false" layoutX="18.0" layoutY="12.0" prefHeight="95.0" prefWidth="298.0"
+              scrollLeft="50.0">
+        <font>
+          <Font size="24.0"/>
+        </font>
+    </TextArea>
 </AnchorPane>
